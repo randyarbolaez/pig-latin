@@ -3,7 +3,7 @@
 pig-latin was made using Python
 
 ```bash
-python src/__init__.py
+python3 src/__init__.py
 ```
 
 ## License
