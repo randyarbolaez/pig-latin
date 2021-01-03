@@ -1,5 +1,11 @@
 VOWELS = ['a','e','i','o','u']
 
+def remove_punctuation(string):
+    correct_string = ''
+    for letter in string:
+        if letter.isalpha():
+            correct_string += letter
+    return correct_string
 
 def input_string_to_translate_to_pig_latin(prompt):
     return input(prompt).strip().lower()
@@ -18,6 +24,7 @@ def word_does_not_begin_with_vowel(word):
 
 def translate_to_pig_latin(words):
     pig_latin_str = ''
+    correct = remove_punctuation(words)
     for word in words:
         if word[0] in VOWELS:
             word_with_way = word + 'yay '
